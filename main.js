@@ -7,10 +7,8 @@ request.addEventListener('load', getRecipe);
 
 function getRecipe() {
   var response = request.responseText;
-  var responseJSON = JSON.parse(response);
-
-  var testing = document.querySelector('.testing');
-  img.src = responseJSON.message;
+  // document.querySelector('.testing') = response;
+ document.body.innerHTML = response;
 }
 
 request.send();
