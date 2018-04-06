@@ -4,9 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Rissotto recipe</title>
 </head>
 <body>
-asdfasdfasdfasdf
+  <header>
+    <p class="header__overtitle">ingredientes</p>
+    <h1 class="header__title">nombre del plato</h1>
+  </header>
+  <nav class="menu">
+    <ul class="menu__list">
+      <li class="menu__item">Seleccionar todo</li>
+      <li class="menu__item">Cancelar todo</li>
+    </ul>
+  </nav>
+  <main>
+    <section class="main__articles">
+      <div class="articles__container">
+        <ul class="articles__list">
+          <li class="articles__item">
+            <input class="item__checkbox" type="checkbox">
+            <span class="item__counter">1</span>
+            <div class="item__descrition">
+              <h4 class="item__description--title">Artículo</h4>
+              <p class="item__description--brand">Marca</p>
+              <p class="item__description--weight">Kg.</p>
+            </div>
+            <span class="item__price">X €</span>
+          </li>
+          <li class="articles__item">
+            <input class="item__checkbox" type="checkbox">
+            <span class="item__counter">1</span>
+            <div class="item__descrition">
+              <h4 class="item__description--title">Artículo</h4>
+              <p class="item__description--brand">Marca</p>
+              <p class="item__description--weight">Kg.</p>
+            </div>
+            <span class="item__price">X €</span>
+          </li>
+          <li class="articles__item">
+            <input class="item__checkbox" type="checkbox">
+            <span class="item__counter">1</span>
+            <div class="item__descrition">
+              <h4 class="item__description--title">Artículo</h4>
+              <p class="item__description--brand">Marca</p>
+              <p class="item__description--weight">Kg.</p>
+            </div>
+            <span class="item__price">X €</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="main__purchase">
+      <div class="purchase__container">
+          <ul class="purchase__list">
+            <li class="purchase__item item--number"><p class="number--title">Items:</p><span class="number--number">1</span></li>
+            <li class="purchase__item item--subtotal"><p class="subtotal--title">Subtotal</p><span class="subtotal--number">€</span></li>
+            <li class="purchase__item item--cost"><p class="cost--title">Gastos de envío</p><span class="cost--number">€</span></li>
+            <li class="purchase__item item--total"><p class="total--title">Total</p><span class="total--number">€</span></li>
+          </ul>
+          <button class="purchase__button">Comprar ingredientes:<span class="purchase__button--total">0€</span></button>
+      </div>
+    </section>
+
+  </main>
 </body>
 </html>
