@@ -17,7 +17,7 @@ fetch('https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-seta
       let item =
       `   <li class="articles__item">
             <input class="item__checkbox" type="checkbox">
-            <input class="item__counter" type="number">
+            <input class="item__quantity" id="item${i}--quantity" name="input--quantity" value="1" type="number">
             <div class="item__description">
               <h4 class="item__description--title">${dishIngredients[i].product}</h4>
               <p class="item__description--brand">${dishIngredients[i].brand? `${dishIngredients[i].brand}` : ''}</p>
