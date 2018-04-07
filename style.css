@@ -55,7 +55,7 @@ header{
   align-items: center;
   border-bottom: 1px solid #CDD3D5;
 }
-.articles__item:nth-child(2){
+.articles__item:nth-child(even){
   background-color: #CDD3D5;
 }
 .item__checkbox{}

@@ -1,14 +1,37 @@
 'use strict'
 
-var request = new XMLHttpRequest();
-request.open('GET', 'https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-setas.json');
+fetch('https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-setas.json')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(json){
+    //Dish name
+    const dishName = json.recipe.name;
+    const placeName = document.querySelector('.header__title')
+    placeName.innerHTML = dishName;
+    //Articles list
+    const dishIngredients = json.recipe.ingredients;
+    const listHTML = '';
+    for (let i = 0; i < dishIngredients.length; i++) {
 
-request.addEventListener('load', getRecipe);
-
-function getRecipe() {
-  var response = request.responseText;
-  // document.querySelector('.testing') = response;
- document.body.innerHTML = response;
-}
-
-request.send();
+      let item =
+      `   <li class="articles__item">
+            <input class="item__checkbox" type="checkbox">
+            <input class="item__counter" type="number">
+            <div class="item__description">
+              <h4 class="item__description--title">${dishIngredients[i].product}</h4>
+              <p class="item__description--brand">${dishIngredients[i].brand? `${dishIngredients[i].brand}` : ''}</p>
+              <p class="item__description--weight">${dishIngredients[i].quantity}</p>
+            </div>
+            <span class="item__price">${dishIngredients[i].price} €</span>
+          </li>
+          `
+const ingredientsList = document.querySelector('.articles__list')
+      // analiza la cadena de texto e inserta los nodos en el orden determinado
+      ingredientsList.insertAdjacentHTML('beforeend', item);
+    }
+    // setFunctionsOnchange();
+  })
+  .catch(function(error){
+    console.log('Ha sucedido un error: ' + error);
+});
