@@ -15,7 +15,6 @@ fetch('https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-seta
     for (let i = 0; i < dishIngredients.length; i++) {
       let item =
       `   <li class="articles__item">
-
             <input class="item__checkbox" type="checkbox">
             <input class="item__quantity" id="item${i}--quantity" name="input--quantity" value="1" type="number">
             <div class="item__description">
@@ -24,7 +23,6 @@ fetch('https://raw.githubusercontent.com/Adalab/recipes-data/master/rissoto-seta
               <p class="item__description--weight">${dishIngredients[i].quantity}</p>
             </div>
             <span class="item__price">${dishIngredients[i].price} €</span>
-
           </li>
           `
 const ingredientsList = document.querySelector('.articles__list')
@@ -50,4 +48,16 @@ let all = document.querySelectorAll("input[type=checkbox]");
 for( let i = 0; i < all.length; i++){
   all[i].checked = false;
 }
-};
+}
+
+//Show price of item selected
+// function showItemPrice (event){
+//   let item = document.querySelector('.articles__item');
+//   let all = document.querySelectorAll("input[type=checkbox]");
+// for (let i = 0; i < all.length; i++){
+//   if item == checked{
+//     console.log(item)
+//   }
+// }
+// }
+;
